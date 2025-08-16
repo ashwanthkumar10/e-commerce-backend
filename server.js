@@ -28,6 +28,9 @@ const __dirname = path.dirname(__filename);
 app.use(cors());
 app.use(express.json());
 
+app.use('/',(req, res)=>{
+  res.send('Welcome to the API');
+})
 // Serve images from the images folder
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
